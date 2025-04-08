@@ -6,34 +6,42 @@
 	margin: 0;
 }
 
-@font-face {
-	font-family: "Limkin";
-	src: url("assets/TMT-LimkinVF.ttf");
-}
+
 
 body {
-	font-family: "Limkin", serif;
-	font-variation-settings: "wght" 500, "SRFF" 100;
-	background: radial-gradient(circle, rgba(243,168,221,1) 0%, rgba(152,219,107,1) 20%, rgba(90,222,232,1) 40%, rgba(253,192,58,1) 60%, rgba(166,144,252,1) 80%, rgba(255,115,77,1) 100%);
-	background-size: 100vw 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 100vh;
+	background:black;
+
 }
 
-.hidden {
-	display: none;
+.container{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
-h1 {
-	margin: 20px;
+
+.container.card
+{
+position:relative;
+width: 320px;
+height: 400px;
+background: pink;
+border-radius: 20px;
+overflow:hidden;
 }
-h2 {
-	margin: 20px;
-}
-p {
-	margin: 20px;
-}
-ul {
-	margin: 20px;
-}
-li {
-	margin: 20px;
+
+.container.card::before
+{
+	content:'';
+	position: absolute;
+	background:radial-gradient(var(--clr),transparent,transparent);
+	width:700px;
+	height:700px;
 }
