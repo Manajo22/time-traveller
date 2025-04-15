@@ -8,7 +8,7 @@
 
 .nav {
   position: fixed;
-  /* STUCK to top */
+
   top: 0;
   left: 0;
   width: 100%;
@@ -16,7 +16,7 @@
   background-color: black;
   padding: 10px;
   z-index: 1000;
-  /* stay above everything */
+ 
 }
 
 .nav a {
@@ -77,12 +77,12 @@ h1 {
 .scroll-text {
   position: absolute;
   top: 400px;
-  /* adjust as needed to fit below subtitle */
+ 
   right: 450px;
-  /* slight left alignment */
+ 
   width: 820px;
   z-index: 1;
-  /* BELOW rectangles */
+ 
 }
 
 .scroll-text p {
