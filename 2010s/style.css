@@ -1,47 +1,191 @@
 /* This is a CSS override! It overrides default values for ALL elements. */
 /* I highly recommend keeping this override in your code. */
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+    box-sizing: border-box;
+    margin: 0;
 }
 
-
+html {
+    cursor: url('https://png.pngtree.com/png-clipart/20241002/original/pngtree-black-torch-light-png-image_16159593.png'), auto;
+    height: 10%
+}
 
 body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-width: 100vh;
-	background:black;
-
-}
-
-.container{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    cursor: url('https://postimg.cc/DWW5jQbD') 15 15, auto;
 }
 
 
-.container.card
-{
-position:relative;
-width: 320px;
-height: 400px;
-background: pink;
-border-radius: 20px;
-overflow:hidden;
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    background-color: black;
+    border-radius: 50px;
+    padding: 7px;
+    gap: clamp(6px, 2vw, 10px);
+    z-index: 10;
 }
 
-.container.card::before
-{
-	content:'';
-	position: absolute;
-	background:radial-gradient(var(--clr),transparent,transparent);
-	width:700px;
-	height:700px;
+.nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+    font-size: clamp(0.1rem, 3vw, 1.2rem);
+    border: 2px solid yellow;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+
+.nav a:active {
+    transform: scale(1.1);
+    background-color: yellow;
+    color: black;
+}
+
+.nav-spacer {
+    flex-grow: 1;
+}
+
+
+
+.intro {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background: #000000;
+    padding: 100px 20px 20px;
+}
+
+
+
+.intro h1 {
+    font-family: "pf-videotext", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/clamp*/
+    font-size: clamp(5rem, 10vw, 10rem);
+    text-shadow: 0 0 8px #ff00d4;
+}
+
+.intro p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.2rem, 3vw, 1.2rem);
+    color: #ccc;
+    align-items: left;
+    text-align: left;
+}
+
+.scroll-prompt {
+
+
+    display: flex;
+    align-items: left;
+    text-align: left;
+    gap: 10px;
+    margin-top: 250px;
+}
+
+.scroll-prompt span {
+    font-size: clamp(0.02rem, 2vw, 1.2rem);
+    font-style: italic;
+    color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.scroll-prompt .arrow {
+    width: clamp(18px, 2vw, 30px);
+    height: auto;
+
+    animation: bounce 1s infinite;
+}
+
+/*https://codepen.io/nelledejones/pen/gOOPWrK*/
+
+@keyframes bounce {
+    70% {
+        transform: translateY(0%);
+    }
+
+    80% {
+        transform: translateY(-15%);
+    }
+
+    90% {
+        transform: translateY(0%);
+    }
+
+    95% {
+        transform: translateY(-7%);
+    }
+
+    97% {
+        transform: translateY(0%);
+    }
+
+    99% {
+        transform: translateY(-3%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+
+.glow-zone {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    overflow-x: hidden;
+}
+
+
+.flashlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: radial-gradient(yellow, transparent 40%, transparent 80%);
+    filter: blur(40%);
+    width: clamp(300px, 50vw, 700px);
+    height: clamp(300px, 50vw, 700px);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 5;
+    transition: opacity 0.5s ease;
+
+}
+
+
+.card {
+    position: relative;
+    z-index: 7;
+    padding: 40px;
+
+    border-radius: 12px;
+    text-align: left;
+    font-family: monospace;
+    color: black;
 }
