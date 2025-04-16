@@ -19,3 +19,8 @@ const flashlight = document.querySelector('.flashlight');
 			flashlight.style.left = event.clientX + 'px';
 			flashlight.style.top = event.clientY + 'px';
 		});
+
+        //https://www.youtube.com/watch?v=I_RhD99rR0c//
+      //Screenshots of Gabriel's code//
+
+     // https://www.w3schools.com/jsref/met_element_addeventlistener.asp//

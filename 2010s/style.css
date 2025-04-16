@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    cursor: url('flashlight-PNG55907-30.png');
 }
 
 html {
@@ -14,7 +15,6 @@ body {
     background: black;
     color: white;
     font-family: sans-serif;
-    cursor: url('https://postimg.cc/DWW5jQbD') 15 15, auto;
 }
 
 
